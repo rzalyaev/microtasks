@@ -1,0 +1,14 @@
+.filterMethod {
+    margin-top: 30px;
+    text-align: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.money__item {
+    margin-right: 10px;
+}
