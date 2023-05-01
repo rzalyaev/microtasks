@@ -1,24 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import {MapMethod} from "./components/MapMethod/MapMethod";
+import {FilterMethod} from "./components/FilterMethod/FilterMethod";
+
+export type MoneyType = {
+    banknote: string,
+    value: number,
+    number: string
+}
+
+export type FilterType = 'all' | 'dollar' | 'ruble'
 
 function App() {
-  return (
+    const [money, setMoney] = useState<MoneyType[]>([
+        { banknote: 'dollar', value: 100, number: ' a1234567890' },
+        { banknote: 'dollar', value: 50, number: ' z1234567890' },
+        { banknote: 'ruble', value: 100, number: ' w1234567890' },
+        { banknote: 'dollar', value: 100, number: ' e1234567890' },
+        { banknote: 'dollar', value: 50, number: ' c1234567890' },
+        { banknote: 'ruble', value: 100, number: ' r1234567890' },
+        { banknote: 'dollar', value: 50, number: ' x1234567890' },
+        { banknote: 'ruble', value: 50, number: ' v1234567890' },
+    ])
+
+    const [filter, setFilter] = useState<FilterType>('all')
+
+    let currentMoney = money;
+    if (filter === 'dollar') {
+        currentMoney = money.filter(filteredMoney => filteredMoney.banknote === 'dollar')
+    }
+    if (filter === 'ruble') {
+        currentMoney = money.filter(filteredMoney => filteredMoney.banknote === 'ruble')
+    }
+
+    const onClickFilterHandler = (buttonName: FilterType) => {
+        setFilter(buttonName);
+    }
+
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MapMethod/>
+      <FilterMethod money={currentMoney} onClickFilterHandler={onClickFilterHandler}/>
     </div>
   );
 }
