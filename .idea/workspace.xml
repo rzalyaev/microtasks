@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc127d7c-1821-451c-9b9b-d2682cb29ff5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/freecodecamp/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/freecodecamp/.idea/freecodecamp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/freecodecamp/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/freecodecamp/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="dc127d7c-1821-451c-9b9b-d2682cb29ff5" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/src/components/Input/Input.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Input/Input.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Input/InputButton/InputButton.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Input/InputButton/InputButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Input/InputContent/InputContent.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Input/InputContent/InputContent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/code.mu" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2OysKu2gmpnhI2ORHCLb1kxv3gl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -26,10 +40,41 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/Programming/frontend/exam-monday-first-week",
+    "last_opened_file_path": "E:/Programming/frontend/microtasks/src/components/Input/InputButton",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "E:\\Programming\\frontend\\microtasks\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programming\frontend\microtasks\src\components\Input\InputButton" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Programming\frontend\microtasks\src\components\Input" />
+      <recent name="E:\Programming\frontend\microtasks\src\components\Input\InputContent" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -40,10 +85,67 @@
       <updated>1682544095619</updated>
       <workItem from="1682544097887" duration="8000" />
       <workItem from="1682544265520" duration="38000" />
+      <workItem from="1683054673871" duration="1451000" />
     </task>
+    <task id="LOCAL-00001" summary="Add idea folder">
+      <created>1682937109626</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682937109626</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add eslint to dependencies">
+      <created>1682937349079</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682937349079</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add eslint">
+      <created>1682937359403</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682937359403</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Migrate Input component code part to the separate component">
+      <created>1683055324955</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683055324955</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add Filter component dependent code part from App.tsx">
+      <created>1683057639766</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683057639766</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add idea folder" />
+    <MESSAGE value="Add eslint to dependencies" />
+    <MESSAGE value="Add eslint" />
+    <MESSAGE value="Migrate Input component code part to the separate component" />
+    <MESSAGE value="Add Filter component dependent code part from App.tsx" />
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>
