@@ -1,20 +1,46 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "./FilterMethod.module.css";
-import {FilterType, MoneyType} from "../../App";
+import {FilterType} from "../../App";
 import {Button} from "../Button/Button";
 
-type MoneyPropsType = {
-    money: MoneyType[]
-    onClickFilterHandler: (buttonName: FilterType) => void
+export type MoneyType = {
+    banknote: string,
+    value: number,
+    number: string
 }
 
-export const FilterMethod = (props: MoneyPropsType) => {
+export const FilterMethod = () => {
+    const [money, setMoney] = useState<MoneyType[]>([
+        { banknote: 'dollar', value: 100, number: ' a1234567890' },
+        { banknote: 'dollar', value: 50, number: ' z1234567890' },
+        { banknote: 'ruble', value: 100, number: ' w1234567890' },
+        { banknote: 'dollar', value: 100, number: ' e1234567890' },
+        { banknote: 'dollar', value: 50, number: ' c1234567890' },
+        { banknote: 'ruble', value: 100, number: ' r1234567890' },
+        { banknote: 'dollar', value: 50, number: ' x1234567890' },
+        { banknote: 'ruble', value: 50, number: ' v1234567890' },
+    ])
+
+    const [filter, setFilter] = useState<FilterType>('all')
+
+    let currentMoney = money;
+    if (filter === 'dollar') {
+        currentMoney = money.filter(filteredMoney => filteredMoney.banknote === 'dollar')
+    }
+    if (filter === 'ruble') {
+        currentMoney = money.filter(filteredMoney => filteredMoney.banknote === 'ruble')
+    }
+
+    const onClickFilterHandler = (buttonName: FilterType) => {
+        setFilter(buttonName);
+    }
+
     return(
         <div className={styles.filterMethod}>
             <h1>Filter Method</h1>
             <table>
                 <caption>Money</caption>
-                {props.money.map((item, index) => {
+                {currentMoney.map((item, index) => {
                     return(
                         <tr key={index}>
                             <th scope="col">{item.banknote}</th>
@@ -24,9 +50,9 @@ export const FilterMethod = (props: MoneyPropsType) => {
                     )
                 })}
             </table>
-            <Button name={'all'} onClickFilterHandler={props.onClickFilterHandler}/>
-            <Button name={'dollar'} onClickFilterHandler={props.onClickFilterHandler}/>
-            <Button name={'ruble'} onClickFilterHandler={props.onClickFilterHandler}/>
+            <Button name={'all'} onClickFilterHandler={onClickFilterHandler}/>
+            <Button name={'dollar'} onClickFilterHandler={onClickFilterHandler}/>
+            <Button name={'ruble'} onClickFilterHandler={onClickFilterHandler}/>
         </div>
     )
 }
