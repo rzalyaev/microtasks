@@ -1,43 +1,24 @@
-h1 {
-    text-align: center;
+.App {
+  padding: 30px;
+  display: flex;
 }
 
-td,
-th {
-    border: 1px solid rgb(190, 190, 190);
-    padding: 10px;
+.App > div {
+  margin-right: 50px;
 }
 
-td {
-    text-align: center;
+.error {
+  border: red 1px solid;
 }
 
-tr:nth-child(even) {
-    background-color: #eee;
+.error-message {
+  color: red;
 }
 
-th[scope='col'] {
-    background-color: #303457;
-    color: #fff;
+.active-filter {
+  background-color: aquamarine;
 }
 
-th[scope='row'] {
-    background-color: #d7d9f2;
-}
-
-caption {
-    font-size: 20px;
-    font-weight: 600;
-    font-family: sans-serif;
-    padding: 10px;
-    caption-side: top;
-}
-
-table {
-    margin: 0 auto;
-    border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
-    letter-spacing: 1px;
-    font-family: sans-serif;
-    font-size: 0.8rem;
+.is-done {
+  opacity: 0.5;
 }
